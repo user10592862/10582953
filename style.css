@@ -339,7 +339,7 @@ footer a:hover {
 /* Responsive Design */
 @media (max-width: 768px) {
     header {
-        display: none;  /* Hides the entire header on small screens */
+        display: none;  /* Completely hides the header on small screens */
     }
 
     header nav ul {
