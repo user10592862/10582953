@@ -281,10 +281,11 @@ footer a:hover {
 }
 
 /* Mobile-Responsive Styling */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px){
     header {
-        display: none !important; /* Ensure the header is hidden */
+        display: none; /* Hides the header on screens 768px or smaller */
     }
+}
 
     .services-grid {
         flex-direction: column;
