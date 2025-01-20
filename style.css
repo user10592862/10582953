@@ -32,7 +32,7 @@ header {
 /* Logo Styling */
 header .logo {
     height: 40px; /* Adjusted logo size */
-    margin-left: 20px; 
+    margin-left: 20px;
     transition: all 0.3s ease;
 }
 
@@ -280,8 +280,12 @@ footer a:hover {
     color: black;
 }
 
-/* Responsive Design */
+/* Mobile-Responsive Styling */
 @media screen and (max-width: 768px) {
+    header {
+        display: none !important; /* Ensure the header is hidden */
+    }
+
     header nav ul {
         flex-direction: column;
         align-items: center;
@@ -302,17 +306,5 @@ footer a:hover {
 
     .testimonial {
         width: 95%;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    header {
-        display: none !important; /* Ensure it's overridden with !important */
-    }
-
-    /* Other media queries */
-    header nav ul {
-        flex-direction: column;
-        align-items: center;
     }
 }
