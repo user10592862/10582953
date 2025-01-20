@@ -308,3 +308,19 @@ footer a:hover {
         width: 95%;
     }
 }
+
+@media screen and (max-width: 768px) {
+    header {
+        display: none;
+    }
+
+    .services-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-members {
+        flex-direction: column;
+        align-items: center;
+    }
+}
