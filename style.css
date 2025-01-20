@@ -161,27 +161,20 @@ header nav ul li a:hover {
 
 .services-grid {
     display: flex;
-    flex-wrap: wrap;  /* This allows items to wrap onto the next line */
-    gap: 30px;        /* Space between items */
-    justify-content: center; /* Keep items centered */
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
 }
 
-/* Service Item Styling */
 .service-item {
     background-color: #fff;
     border-radius: 10px;
     padding: 30px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    flex-basis: 100%;   /* Make each service item take full width by default */
+    flex-basis: 30%;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* On Large Screens - Three items per row */
-@media (min-width: 768px) {
-    .service-item {
-        flex-basis: 30%;  /* Each item takes up 30% of the container space */
-    }
 }
 
 .service-item:hover {
@@ -345,6 +338,10 @@ footer a:hover {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    header {
+        display: none;  /* Hides the entire header on small screens */
+    }
+
     header nav ul {
         flex-direction: column; /* Stack menu items on small screens */
     }
