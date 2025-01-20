@@ -161,20 +161,27 @@ header nav ul li a:hover {
 
 .services-grid {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
-    margin-top: 40px;
+    flex-wrap: wrap;  /* This allows items to wrap onto the next line */
+    gap: 30px;        /* Space between items */
+    justify-content: center; /* Keep items centered */
 }
 
+/* Service Item Styling */
 .service-item {
     background-color: #fff;
     border-radius: 10px;
     padding: 30px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    flex-basis: 30%;
+    flex-basis: 100%;   /* Make each service item take full width by default */
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* On Large Screens - Three items per row */
+@media (min-width: 768px) {
+    .service-item {
+        flex-basis: 30%;  /* Each item takes up 30% of the container space */
+    }
 }
 
 .service-item:hover {
