@@ -373,10 +373,16 @@ footer a:hover {
 
 @media (max-width: 480px) {
     .hero h1 {
-        font-size: 2.5rem; /* Further adjust font size on very small screens */
+        font-size: 2.5rem; /* Smaller font size */
     }
 
     .cta-btn {
-        padding: 10px 30px;
+        padding: 10px 30px; /* Adjust padding for smaller devices */
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        display: none; /* Hide the header for medium and smaller devices */
     }
 }
