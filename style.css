@@ -280,28 +280,99 @@ footer a:hover {
     color: black;
 }
 
-/* Mobile-Responsive Styling */
-@media screen and (max-width: 768px){
-    header {
-        display: none; /* Hides the header on screens 768px or smaller */
-    }
+/* Our Team Section */
+#team {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: transparent;
 }
+
+#team h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.team-members {
+    display: flex;                /* Display team members in a row */
+    justify-content: center;      /* Center align horizontally */
+    align-items: center;          /* Center vertically */
+    gap: 30px;                    /* Space between boxes */
+    flex-wrap: wrap;              /* Allow items to wrap on small screens */
+    margin-top: 30px;
+}
+
+.team-member {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 220px;                 /* Fixed width for team member boxes */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+}
+
+.team-member img {
+    width: 100%;                  /* Ensure image is responsive */
+    border-radius: 50%;           /* Circular images */
+    margin-bottom: 15px;
+}
+
+.team-member h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.team-member p {
+    font-size: 1.1rem;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column; /* Stack menu items on small screens */
+    }
+    
+    header nav ul li {
+        margin: 10px 0; /* Spacing between menu items */
+    }
+
+    .hero h1 {
+        font-size: 3rem; /* Adjust font size */
+    }
 
     .services-grid {
         flex-direction: column;
-        align-items: center;
     }
 
-    .service-item {
-        flex-basis: 80%;
+    .service-item, .team-member {
+        width: 80%; /* Adjust the item width */
     }
 
+    .testimonials {
+        padding: 20px;
+    }
+    
     .testimonial {
-        width: 95%;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2.5rem; /* Further adjust font size on very small screens */
     }
 
-    .team-members {
-        flex-direction: column;
-        align-items: center;
+    .cta-btn {
+        padding: 10px 30px;
     }
 }
