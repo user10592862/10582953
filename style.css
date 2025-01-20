@@ -286,15 +286,6 @@ footer a:hover {
         display: none !important; /* Ensure the header is hidden */
     }
 
-    header nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    header nav ul li {
-        margin: 10px 0;
-    }
-
     .services-grid {
         flex-direction: column;
         align-items: center;
@@ -306,17 +297,6 @@ footer a:hover {
 
     .testimonial {
         width: 95%;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    header {
-        display: none;
-    }
-
-    .services-grid {
-        flex-direction: column;
-        align-items: center;
     }
 
     .team-members {
