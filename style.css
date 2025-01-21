@@ -425,6 +425,13 @@ body {
     background-color: #000000;
 }
 
+/* Container for the "View All of Our Tutors" Button */
+.view-tutors-btn-container {
+    display: flex;
+    justify-content: center;  /* Centers the button horizontally */
+    margin-top: 80px;         /* Increased space between the team section and button */
+}
+
 /* Ensure content adapts well for mobile devices */
 @media (max-width: 768px) {
     #contact input,
