@@ -1,3 +1,4 @@
+
 /* Reset basic styles */
 * {
     margin: 0;
@@ -371,15 +372,78 @@ footer a:hover {
     }
 }
 
+/* Use a Chinese-Friendly Font */
+body {
+    font-family: 'Roboto', sans-serif, 'Noto Sans SC', sans-serif;
+}
+
+/* Update button and form styles based on Chinese text */
+#contact p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+#contact input,
+#contact textarea {
+    font-size: 1rem;  
+    padding: 12px;
+    width: 100%; 
+    max-width: 600px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+
+#contact input::placeholder,
+#contact textarea::placeholder {
+    color: #888;
+}
+
+#contact label {
+    display: block;
+    margin-bottom: 5px;  /* Makes the label closer to the input */
+    font-weight: bold;
+}
+
+#contact textarea {
+    min-height: 150px;  /* Ensure enough space for the textarea */
+}
+
+#contact button {
+    background-color: #000000;
+    color: white;
+    font-size: 1rem;
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#contact button:hover {
+    background-color: #000000;
+}
+
+/* Ensure content adapts well for mobile devices */
+@media (max-width: 768px) {
+    #contact input,
+    #contact textarea {
+        width: 80%;
+        margin: 10px auto;
+    }
+}
+
 @media (max-width: 480px) {
     .hero h1 {
         font-size: 2.5rem; /* Smaller font size */
     }
+}
 
     .cta-btn {
         padding: 10px 30px; /* Adjust padding for smaller devices */
     }
-}
 
 @media (max-width: 768px) {
     header {
