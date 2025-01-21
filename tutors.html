@@ -91,21 +91,23 @@
 
         <!-- Tutor Cards/Grid -->
         <div class="team-members" id="tutor-cards">
-            <!-- Example Tutor 1 -->
             <div class="team-member">
-                <img src="images/tutor1.jpg" alt="Tutor 1">
-                <h3 id="tutor1-name">Brighton Minh</h3>
+                <img src="images/tutor1.jpg">
+                <h3 id="tutor1-name">Brighton Minh / </h3>
                 <p id="tutor1-subject">General Academic Tutor</p>
             </div>
             
-            <!-- Example Tutor 2 -->
             <div class="team-member">
-                <img src="images/WuMaggie.png" alt="Tutor 2">
+                <img src="images/WuMaggie.png">
                 <h3 id="tutor2-name">Maggie Wu / 麦琪</h3>
                 <p id="tutor2-subject">General Academic Tutor</p>
             </div>
 
-            <!-- More tutors can be added here as needed -->
+            <div class="team-member">
+                <img src="images/tutor3.png">
+                <h3 id="tutor2-name">Brayden Ho / 家霖</h3>
+                <p id="tutor2-subject">General Academic Tutor</p>
+            </div>
         </div>
     </div>
 
@@ -126,6 +128,8 @@
                 document.getElementById('tutor2-name').textContent = "Maggie Wu / 麦琪";
                 document.getElementById('tutor2-subject').textContent = "普通学术导师";
                 
+                document.getElementById('tutor3-name').textContent = "Brayden Ho / 家霖";
+                document.getElementById('tutor3-subject').textContent = "普通学术导师";
                 // Change language toggle button text
                 document.querySelector('.language-toggle').textContent = "Switch to English";
             } else {
@@ -141,6 +145,8 @@
                 document.getElementById('tutor2-name').textContent = "Maggie Wu / 麦琪";
                 document.getElementById('tutor2-subject').textContent = "General Academic Tutor";
 
+                document.getElementById('tutor3-name').textContent = "Brayden Ho / 家霖";
+                document.getElementById('tutor3-subject').textContent = "General Academic Tutor";
                 // Change language toggle button text
                 document.querySelector('.language-toggle').textContent = "切换语言";
             }
