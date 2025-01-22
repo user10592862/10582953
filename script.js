@@ -62,7 +62,7 @@ function translateToChinese() {
                 </div>
             </div>
             <div class="view-tutors-btn-container">
-                <a href="tutors.html" class="cta-btn">查看我们所有的导师</a>
+                <a href="/tutors/" class="cta-btn">查看我们所有的导师</a>
             </div>
         </section>
 
