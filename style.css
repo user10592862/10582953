@@ -280,7 +280,7 @@ footer a:hover {
     color: black;
 }
 
-/* Our Team Section */
+/* Main Team Section */
 #team {
     padding: 60px 20px;
     text-align: center;
@@ -293,47 +293,74 @@ footer a:hover {
     color: #333;
 }
 
+/* Team Members Flexbox for horizontal layout */
 .team-members {
-    display: flex;                /* Display team members in a row */
-    justify-content: center;      /* Center align horizontally */
-    align-items: center;          /* Center vertically */
-    gap: 30px;                    /* Space between boxes */
-    flex-wrap: wrap;              /* Allow items to wrap on small screens */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px; /* Space between team member containers */
     margin-top: 30px;
 }
 
+.team-member-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Space between the main and sub-team members */
+}
+
+/* Team Member */
 .team-member {
     background-color: #fff;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 220px;                 /* Fixed width for team member boxes */
+    width: 220px; 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Team Member Images */
+.team-member img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+/* Hover Effects for Main Team Members */
 .team-member:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
 }
 
-.team-member img {
-    width: 100%;                  /* Ensure image is responsive */
-    border-radius: 50%;           /* Circular images */
+/* Sub Team Members (left and right next to main members) */
+.team-sub-member {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 220px;
+}
+
+/* Sub Member Images */
+.team-sub-member img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
     margin-bottom: 15px;
 }
 
-.team-member h3 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 10px;
-    color: #333;
+/* Specific Styles for Left and Right Sub Members */
+.team-sub-member.left {
+    order: -1; /* Ensure left sub-members are placed to the left of main member */
 }
 
-.team-member p {
-    font-size: 1.1rem;
-    color: #777;
-    margin-bottom: 15px;
+/* Sub Member Hover Effects */
+.team-sub-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
 }
 
 /* Responsive Design */
