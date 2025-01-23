@@ -381,20 +381,17 @@ footer a:hover {
         font-size: 3rem; /* Adjust font size */
     }
 
+/* Services section */
     .services-grid {
-        flex-direction: column;
+        display: flex;            /* Align the items using flexbox */
+        flex-direction: column;   /* Stack items vertically */
+        align-items: center;      /* Center-align the items */
     }
 
-    .service-item, .team-member {
-        width: 80%; /* Adjust the item width */
-    }
-
-    .testimonials {
-        padding: 20px;
-    }
-    
-    .testimonial {
-        width: 100%;
+    .service-item {
+        width: 90%;               /* Make service boxes larger */
+        margin: 10px 0;           /* Add some margin to avoid crowding */
+        padding: 20px;            /* Increase padding for a more spacious look */
     }
 }
 
