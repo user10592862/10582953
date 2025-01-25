@@ -210,6 +210,7 @@ header nav ul li a:hover {
     border-radius: 10px;
     text-align: center;
     transition: box-shadow 0.3s ease;
+    max-width: fit-content;
 }
 
 .testimonial:hover {
