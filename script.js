@@ -2,7 +2,7 @@ function translateToChinese() {
     document.body.innerHTML = `
         <header>
             <a href="#home">
-                <img src="images/StudicoreHeader.png" alt="Studicore Tutoring Logo" class="logo">
+                <img src="images/SCORE.png" alt="Studicore Academy Logo" class="logo">
             </a>
             <nav>
                 <ul>
