@@ -90,8 +90,8 @@
 </head>
 <body>
 
-    <!-- Language Toggle Button -->
-    <button class="language-toggle" onclick="toggleLanguage()">切换语言</button> <!-- Button initially in Chinese -->
+    <!-- Back Button -->
+    <button class="back-button" onclick="window.location.href='index.html'">Home</button> <!-- Button links to original page -->
 
     <!-- "Our Tutors" page container -->
     <div class="tutors-page-container">
@@ -100,64 +100,153 @@
         <!-- Tutor Cards/Grid -->
         <div class="team-members" id="tutor-cards">
             <div class="team-member">
-                <img src="images/tutor1.jpg">
-                <h3 id="tutor1-name">Brighton Minh / 布莱顿</h3>
+                <img src="../images/WuMaggie.png">
+                <h3 id="tutor1-name">Maggie Wu</h3>
                 <p id="tutor1-subject">General Academic Tutor</p>
             </div>
 
             <div class="team-member">
-                <img src="images/tutor3.png">
-                <h3 id="tutor2-name">Brayden Ho / 家霖</h3>
+                <img src="../images/HoBrayden.jpg">
+                <h3 id="tutor2-name">Brayden Ho</h3>
                 <p id="tutor2-subject">General Academic Tutor</p>
             </div>
 
             <div class="team-member">
-                <img src="images/JiangCabio.png">
-                <h3 id="tutor3-name">Cabio Jiang / 江浚延</h3>
-                <p id="tutor3-subject">Math Tutor</p>
+                <img src="../images/VuEmma.JPG">
+                <h3 id="tutor3-name">Emma Vu</h3>
+                <p id="tutor3-subject">General Academic Tutor</p>
             </div>
 
-    <script>
-        function toggleLanguage() {
-            const currentLanguage = document.documentElement.lang;
+            <div class="team-member">
+                <img src="../images/OeiJolene.png">
+                <h3 id="tutor4-name">Jolene Oei</h3>
+                <p id="tutor4-subject">General Academic Tutor</p>
+            </div>
 
-            if (currentLanguage === "en") {
-                document.documentElement.lang = "zh";  // Change language to Chinese
-                
-                // Change "Our Tutors" header
-                document.getElementById('our-tutors-header').textContent = "我们的辅导员";
-                
-                // Change tutor names and subjects
-                document.getElementById('tutor1-name').textContent = "Brighton Minh / 布莱顿";
-                document.getElementById('tutor1-subject').textContent = "普通学术导师";
+            <div class="team-member">
+                <img src="../images/MinhBrighton.png">
+                <h3 id="tutor5-name">Kim Faith</h3>
+                <p id="tutor5-subject">General Academic Tutor</p>
+            </div>
 
-                document.getElementById('tutor2-name').textContent = "Brayden Ho / 家霖";
-                document.getElementById('tutor2-subject').textContent = "普通学术导师";
-                
-                document.getElementById('tutor3-name').textContent = "Cavio Jiang / 江浚延";
-                document.getElementById('tutor3-subject').textContent = "数学导师";
-                // Change language toggle button text
-                document.querySelector('.language-toggle').textContent = "Switch to English";
-            } else {
-                document.documentElement.lang = "en";  // Change language to English
+            <div class="team-member">
+                <img src="../images/MoyKayla.png">
+                <h3 id="tutor6-name">Kayla Moy </h3>
+                <p id="tutor6-subject">General Academic Tutor</p>
+            </div>
 
-                // Change "Our Tutors" header back
-                document.getElementById('our-tutors-header').textContent = "Our Tutors";
-                
-                // Change tutor names and subjects back
-                document.getElementById('tutor1-name').textContent = "Brighton Minh / 布莱顿";
-                document.getElementById('tutor1-subject').textContent = "General Academic Tutor";
+            <div class="team-member">
+                <img src="../images/JiangCabio.png">
+                <h3 id="tutor7-name">Cabio Jiang</h3>
+                <p id="tutor7-subject">General Academic Tutor</p>
+            </div>
 
-                document.getElementById('tutor2-name').textContent = "Brayden Ho / 家霖";
-                document.getElementById('tutor2-subject').textContent = "General Academic Tutor";
+            <div class="team-member">
+                <img src="../images/KimFaith.png">
+                <h3 id="tutor8-name">Kim Faith </h3>
+                <p id="tutor8-subject">General Academic Tutor</p>
+            </div>
 
-                document.getElementById('tutor3-name').textContent = "Cabio Jiang / 江浚延";
-                document.getElementById('tutor3-subject').textContent = "Math Tutor";
-                // Change language toggle button text
-                document.querySelector('.language-toggle').textContent = "切换语言";
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Buttons for Translate and Back */
+        .language-toggle, .back-button {
+            position: absolute;
+            padding: 15px 25px;
+            font-size: 1.2rem;
+            color: white;
+            border: none;
+            cursor: pointer;
+            background-color: #333; /* Black background for both buttons */
+            border-radius: 5px;
+        }
+
+        .language-toggle {
+            top: 20px;
+            right: 20px; /* Ensures it's on the top right */
+        }
+
+        .back-button {
+            top: 20px;
+            left: 20px; /* Ensures it's on the top left */
+        }
+
+        /* Styling for hover effect */
+        .language-toggle:hover, .back-button:hover {
+            background-color: #000000; /* Slightly lighter shade for hover */
+        }
+
+        .tutors-page-container {
+            padding: 50px;
+            text-align: center;
+        }
+
+        #our-tutors-header {
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
+
+        .team-members {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 items per row */
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .team-member {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow effect */
+        }
+
+        .team-member img {
+            width: 100%;
+            height: 350px; /* Taller height for images */
+            object-fit: cover; /* Ensures the image fills the container without distortion */
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .team-member h3 {
+            margin: 5px 0;
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        .team-member p {
+            margin: 0;
+            font-size: 1rem;
+            color: #777;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .team-members {
+                grid-template-columns: repeat(2, 1fr); /* 2 items per row on smaller screens */
             }
         }
-    </script>
-    
+
+        @media (max-width: 480px) {
+            .team-members {
+                grid-template-columns: 1fr; /* 1 item per row on very small screens */
+            }
+        }
+    </style>
 </body>
 </html>
