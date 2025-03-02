@@ -112,7 +112,7 @@
             </div>
 
             <div class="team-member">
-                <img src="../images/VuEmma.png">
+                <img src="../images/VuEmma.JPG">
                 <h3 id="tutor3-name">Emma Vu</h3>
                 <p id="tutor3-subject">General Academic Tutor</p>
             </div>
@@ -148,105 +148,143 @@
             </div>
 
     <style>
-        /* General Styles */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
 
-        /* Buttons for Translate and Back */
-        .language-toggle, .back-button {
-            position: absolute;
-            padding: 15px 25px;
-            font-size: 1.2rem;
-            color: white;
-            border: none;
-            cursor: pointer;
-            background-color: #333; /* Black background for both buttons */
-            border-radius: 5px;
-        }
+/* Buttons for Translate and Back */
+.language-toggle, .back-button {
+    position: absolute;
+    padding: 15px 25px;
+    font-size: 1.2rem;
+    color: white;
+    border: none;
+    cursor: pointer;
+    background-color: #333; /* Black background for both buttons */
+    border-radius: 5px;
+}
 
-        .language-toggle {
-            top: 20px;
-            right: 20px; /* Ensures it's on the top right */
-        }
+.language-toggle {
+    top: 20px;
+    right: 20px; /* Ensures it's on the top right */
+}
 
-        .back-button {
-            top: 20px;
-            left: 20px; /* Ensures it's on the top left */
-        }
+.back-button {
+    top: 20px;
+    left: 20px; /* Ensures it's on the top left */
+}
 
-        /* Styling for hover effect */
-        .language-toggle:hover, .back-button:hover {
-            background-color: #000000; /* Slightly lighter shade for hover */
-        }
+/* Styling for hover effect */
+.language-toggle:hover, .back-button:hover {
+    background-color: #000000; /* Slightly lighter shade for hover */
+}
 
-        .tutors-page-container {
-            padding: 50px;
-            text-align: center;
-        }
+.tutors-page-container {
+    padding: 50px;
+    text-align: center;
+}
 
-        #our-tutors-header {
-            font-size: 2rem;
-            margin-bottom: 30px;
-        }
+#our-tutors-header {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
 
-        .team-members {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr); /* 4 items per row */
-            gap: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+.team-members {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 items per row */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
-        .team-member {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            background-color: #fff;
-            border-radius: 10px;
-            padding: 15px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow effect */
-        }
+.team-member {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow effect */
+}
 
-        .team-member img {
-            width: 100%;
-            height: 350px; /* Taller height for images */
-            object-fit: cover; /* Ensures the image fills the container without distortion */
-            border-radius: 10px;
-            margin-bottom: 15px;
-        }
+.team-member img {
+    width: 100%;
+    height: 350px; /* Taller height for images */
+    object-fit: cover; /* Ensures the image fills the container without distortion */
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
 
-        .team-member h3 {
-            margin: 5px 0;
-            font-size: 1.1rem;
-            color: #333;
-        }
+.team-member h3 {
+    margin: 5px 0;
+    font-size: 1.1rem;
+    color: #333;
+}
 
-        .team-member p {
-            margin: 0;
-            font-size: 1rem;
-            color: #777;
-        }
+.team-member p {
+    margin: 0;
+    font-size: 1rem;
+    color: #777;
+}
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .team-members {
-                grid-template-columns: repeat(2, 1fr); /* 2 items per row on smaller screens */
-            }
-        }
+/* Responsive Design */
+@media (max-width: 768px) {
+    .team-members {
+        grid-template-columns: repeat(2, 1fr); /* 2 items per row on smaller screens */
+        gap: 15px; /* Reduce gap for better spacing on mobile */
+        padding: 0 10px; /* Add padding to prevent boxes from touching the edges */
+    }
 
-        @media (max-width: 480px) {
-            .team-members {
-                grid-template-columns: 1fr; /* 1 item per row on very small screens */
-            }
-        }
+    .team-member {
+        width: 100%; /* Full width for mobile */
+        padding: 10px; /* Reduce padding for mobile */
+    }
+
+    .team-member img {
+        height: 250px; /* Reduce image height for mobile */
+    }
+
+    .team-member h3 {
+        font-size: 1rem; /* Slightly smaller font size for mobile */
+    }
+
+    .team-member p {
+        font-size: 0.9rem; /* Slightly smaller font size for mobile */
+    }
+
+}
+
+@media (max-width: 480px) {
+    .team-members {
+        grid-template-columns: 1fr; /* 1 item per row on very small screens */
+    }
+
+    .team-member {
+        width: 100%; /* Full width for very small screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .back-button {
+        margin: 5px;
+        left: 50%; /* Center the home button on mobile */
+        transform: translateX(-50%); /* Adjust for exact centering */
+        padding: 15px 15px; /* Smaller padding for mobile */
+        font-size: 0.9rem; /* Smaller font size for mobile */
+    }
+
+    .tutors-page-container {
+        margin-top: 20px; /* Add margin to the top of the section below */
+    }
+}
     </style>
 </body>
 </html>
