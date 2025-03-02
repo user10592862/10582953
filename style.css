@@ -482,6 +482,19 @@ body {
     }
 }
 
+/* Responsive Adjustment for Mobile (less than 768px) */
+@media (max-width: 768px) {
+    #clients {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .client-box {
+        width: 80%; /* Make the boxes wider on mobile */
+        margin-bottom: 20px;
+    }
+}
+
 /* Testimonials Section */
 .testimonials {
     padding: 60px 20px; /* Increased padding for better spacing */
