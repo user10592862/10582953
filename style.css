@@ -546,3 +546,10 @@ body {
         font-size: 0.9rem; /* Slightly smaller font size for mobile */
     }
 }
+
+.team-member img {
+    width: 200px;       /* or any fixed size you prefer */
+    height: 300px;
+    object-fit: cover;  /* ensures the image fills the space without distortion */
+    border-radius: 8px; /* optional: makes the corners rounded */
+}
