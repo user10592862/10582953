@@ -1,38 +1,56 @@
 // script.js
 document.addEventListener('DOMContentLoaded', function() {
-    // Smooth scrolling for all anchor links
+    // Custom smooth scroll function
+    function smoothScroll(targetId) {
+        const targetElement = document.querySelector(targetId);
+        if (!targetElement) return;
+        
+        const headerHeight = document.querySelector('header').offsetHeight;
+        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+        const startPosition = window.pageYOffset;
+        const distance = targetPosition - startPosition;
+        const duration = 800; // Adjust duration as needed (800ms is smooth)
+        let startTime = null;
+        
+        function animation(currentTime) {
+            if (!startTime) startTime = currentTime;
+            const timeElapsed = currentTime - startTime;
+            const progress = Math.min(timeElapsed / duration, 1);
+            const easeProgress = easeInOutQuad(progress);
+            window.scrollTo(0, startPosition + distance * easeProgress);
+            
+            if (timeElapsed < duration) {
+                requestAnimationFrame(animation);
+            }
+        }
+        
+        function easeInOutQuad(t) {
+            return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+        }
+        
+        requestAnimationFrame(animation);
+        
+        // Update URL without page jump
+        history.pushState(null, null, targetId);
+    }
+
+    // Apply to navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
-            
-            const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
-            
-            const targetElement = document.querySelector(targetId);
-            if (!targetElement) return;
-            
-            // Calculate the scroll position, accounting for fixed header
-            const headerHeight = document.querySelector('header').offsetHeight;
-            const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
-            
-            // Smooth scroll animation
-            window.scrollTo({
-                top: targetPosition,
-                behavior: 'smooth'
-            });
-            
-            // Update URL without jumping
-            if (history.pushState) {
-                history.pushState(null, null, targetId);
-            } else {
-                window.location.hash = targetId;
-            }
+            smoothScroll(this.getAttribute('href'));
         });
     });
     
-    // Highlight active section in navigation
+    // Apply to CTA button
+    document.querySelector('.cta-btn').addEventListener('click', function(e) {
+        e.preventDefault();
+        smoothScroll('#contact');
+    });
+    
+    // Active section highlighting
     window.addEventListener('scroll', function() {
-        const scrollPosition = window.scrollY;
+        const scrollPosition = window.pageYOffset;
         const headerHeight = document.querySelector('header').offsetHeight;
         
         document.querySelectorAll('section').forEach(section => {
@@ -51,6 +69,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Add active class to home link by default
+    // Set home as active by default
     document.querySelector('nav ul li a[href="#home"]').classList.add('active');
 });
